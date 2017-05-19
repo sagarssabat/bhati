@@ -1,0 +1,103 @@
+@import "../bourbon/bourbon";
+@import "../bootstrap-sass/assets/stylesheets/bootstrap";
+@font-face {
+    font-family: 'exoLight';
+    src: url('../fonts/Exo2-Light.ttf');
+}
+
+@font-face {
+    font-family: 'exoRegular';
+    src: url('../fonts/Exo2-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'exoMedium';
+    src: url('../fonts/Exo2-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'exoSemiBold';
+    src: url('../fonts/Exo2-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'exoBold';
+    src: url('../fonts/Exo2-Bold.ttf');
+}
+
+$white: #ffffff !default;
+$base-color: #23b2ba !default;
+// @mixin btn-custom($color,
+// $background,
+// $border) {
+//     color: $color;
+//     background: $background;
+//     border: $border;
+// }
+.marg0 {
+    margin: 0;
+}
+
+.padd0 {
+    padding: 0;
+}
+
+.relate {
+    position: relative;
+}
+
+.btn-custom {
+    @include button-variant($base-color,
+    $white,
+    $white);
+}
+
+.main-banner {
+    background: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    height: 100vh;
+}
+
+.about-banner {
+    .overlay-blue {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(35, 178, 186, 0.4);
+    }
+    .plus-img {
+        position: absolute;
+        top: 4%;
+        left: 3%;
+        height: 94%;
+    }
+    .abs-center {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%,
+        -50%));
+        color: $white;
+        .abt-head {
+            font-family: 'exoMedium';
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .abt-text {
+            font-family: 'exoRegular';
+            margin-bottom: 40px;
+        }
+        .btn-custom {
+            font-family: 'exoSemiBold';
+            text-transform: uppercase;
+            border-radius: 0;
+            width: 140px;
+            padding: 8px 12px;
+        }
+    }
+}
