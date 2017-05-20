@@ -25,6 +25,18 @@
     src: url('../fonts/Exo2-Bold.ttf');
 }
 
+// reset css
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+// reset css
 $white: #ffffff !default;
 $base-color: #23b2ba !default;
 // @mixin btn-custom($color,
@@ -34,6 +46,16 @@ $base-color: #23b2ba !default;
 //     background: $background;
 //     border: $border;
 // }
+.base-head {
+    color: $base-color;
+    font-family: 'exoMedium';
+    text-transform: uppercase;
+}
+
+.base-text {
+    font-family: 'exoRegular';
+}
+
 .marg0 {
     margin: 0;
 }
@@ -58,6 +80,15 @@ $base-color: #23b2ba !default;
     background-size: cover;
     background-position: 100% 100%;
     height: 100vh;
+}
+
+.min-height500 {
+    min-height: 500px;
+    display: table;
+    .v-center {
+        display: table-cell;
+        vertical-align: middle;
+    }
 }
 
 .about-banner {
@@ -98,6 +129,28 @@ $base-color: #23b2ba !default;
             border-radius: 0;
             width: 140px;
             padding: 8px 12px;
+        }
+    }
+}
+
+.tab-head {
+    .tab-icon {
+        display: inline-block;
+        text-align: left;
+        .base-text {
+            text-transform: uppercase;
+        }
+        .base-head {
+            color: $white;
+        }
+        &:before {
+            content: '\f002';
+            font-family: 'FontAwesome';
+            position: absolute;
+            top: 50%;
+            left: 28%;
+            transform: translate(0, -50%);
+            font-size: 26px;
         }
     }
 }

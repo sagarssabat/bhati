@@ -5821,6 +5821,23 @@ button.close {
 @font-face {
   font-family: 'exoBold';
   src: url("../fonts/Exo2-Bold.ttf"); }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+.base-head {
+  color: #23b2ba;
+  font-family: 'exoMedium';
+  text-transform: uppercase; }
+
+.base-text {
+  font-family: 'exoRegular'; }
+
 .marg0 {
   margin: 0; }
 
@@ -5866,6 +5883,13 @@ button.close {
   background-position: 100% 100%;
   height: 100vh; }
 
+.min-height500 {
+  min-height: 500px;
+  display: table; }
+  .min-height500 .v-center {
+    display: table-cell;
+    vertical-align: middle; }
+
 .about-banner .overlay-blue {
   position: absolute;
   top: 0;
@@ -5902,5 +5926,21 @@ button.close {
     border-radius: 0;
     width: 140px;
     padding: 8px 12px; }
+
+.tab-head .tab-icon {
+  display: inline-block;
+  text-align: left; }
+  .tab-head .tab-icon .base-text {
+    text-transform: uppercase; }
+  .tab-head .tab-icon .base-head {
+    color: #ffffff; }
+  .tab-head .tab-icon:before {
+    content: '\f002';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(0, -50%);
+    font-size: 26px; }
 
 /*# sourceMappingURL=main.css.map */
